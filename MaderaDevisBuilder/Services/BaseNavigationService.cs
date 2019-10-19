@@ -26,7 +26,7 @@ namespace MaderaDevisBuilder.Services
                 else
                 {
                     _pagesByKeys.Add(pageKey, pageType);
-                }
+                } 
             }
         }
 
