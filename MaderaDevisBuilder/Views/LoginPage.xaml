@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaderaDevisBuilder.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" Text="Veuillez vous connecter"/>
+            
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="80*" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="1" VerticalOptions="Center">                    
+                    <Entry x:Name="mail" Placeholder="Adress mail" TextColor="BlueViolet" PlaceholderColor="#bababa" FontSize="16"/>
+                    <Entry x:Name="pass" IsPassword="True" TextColor="BlueViolet" Placeholder="Mot de passe" PlaceholderColor="#bababa" FontSize="16"/>
+                    <Button TextColor="White" BackgroundColor="BlueViolet" Text="Se connecter" />
+                    <Label Text="Le nom d'utilisateur ou le mot de passe est invalide !" TextColor="Red" />
+                </StackLayout>
+            </Grid>
+            <StackLayout Grid.Row="2">
+                <Label HeightRequest="1" BackgroundColor="#bababa" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                <Label HorizontalTextAlignment="Center" Text="Continuer sans se connecter"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>
