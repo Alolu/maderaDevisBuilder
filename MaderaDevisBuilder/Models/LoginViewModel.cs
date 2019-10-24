@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel;
 
-namespace MaderaDevisBuilder.ViewModels
-{
+namespace MaderaDevisBuilder.Models { 
+
     public class LoginViewModel : INotifyPropertyChanged
     {
-        private string _username;
-        private string _password;
-        private bool _validCredentials;
+//        private string _username;
+//        private string _password;
+//        private bool _validCredentials;
 
         public LoginViewModel()
         {

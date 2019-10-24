@@ -1,5 +1,5 @@
 ﻿using System;
-using MaderaDevisBuilder.Views;
+using MaderaDevisBuilder.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using MaderaDevisBuilder.ViewModels;
+﻿using MaderaDevisBuilder.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MaderaDevisBuilder.Views
+namespace MaderaDevisBuilder.ViewModels
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
