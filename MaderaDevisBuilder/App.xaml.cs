@@ -1,7 +1,4 @@
-﻿using System;
-using MaderaDevisBuilder.Views;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace MaderaDevisBuilder
 {
@@ -11,7 +8,7 @@ namespace MaderaDevisBuilder
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            MainPage = new NavigationPage(new ViewModels.LoginPage());
         }
 
         protected override void OnStart()

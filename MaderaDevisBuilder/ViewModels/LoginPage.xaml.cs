@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using MaderaDevisBuilder.ViewModels;
+using MaderaDevisBuilder.Models;
+using MaderaDevisBuilder.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MaderaDevisBuilder.Views
+namespace MaderaDevisBuilder.ViewModels
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
@@ -15,9 +15,14 @@ namespace MaderaDevisBuilder.Views
         {
             InitializeComponent();
             BindingContext = viewModel;
-
+            NavigationPage.SetHasBackButton(this, false);
             mail.Completed += (sender, args) => { pass.Focus(); };
 
+        }
+
+        async void OnNextPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MenuPage());
         }
     }
 }
