@@ -1,4 +1,6 @@
-﻿using MaderaDevisBuilder.Models;
+﻿using System;
+using MaderaDevisBuilder.Models;
+using MaderaDevisBuilder.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,9 +15,14 @@ namespace MaderaDevisBuilder.ViewModels
         {
             InitializeComponent();
             BindingContext = viewModel;
-
+            NavigationPage.SetHasBackButton(this, false);
             mail.Completed += (sender, args) => { pass.Focus(); };
 
+        }
+
+        async void OnNextPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MenuPage());
         }
     }
 }

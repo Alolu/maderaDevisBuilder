@@ -20,7 +20,7 @@
                 <StackLayout Grid.Column="1" VerticalOptions="Center">                    
                     <Entry x:Name="mail" Placeholder="Adress mail" TextColor="BlueViolet" PlaceholderColor="#bababa" FontSize="16"/>
                     <Entry x:Name="pass" IsPassword="True" TextColor="BlueViolet" Placeholder="Mot de passe" PlaceholderColor="#bababa" FontSize="16"/>
-                    <Button TextColor="White" BackgroundColor="BlueViolet" Text="Se connecter" />
+                    <Button Clicked="OnNextPageButtonClicked" TextColor="White" BackgroundColor="BlueViolet" Text="Se connecter" />
                     <Label Text="Le nom d'utilisateur ou le mot de passe est invalide !" TextColor="Red" />
                 </StackLayout>
             </Grid>
