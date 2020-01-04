@@ -5,10 +5,50 @@
              xmlns:Components="clr-namespace:MaderaDevisBuilder.Components"
              BackgroundColor="#4ECE98">
     <ContentPage.Content>
-        <StackLayout WidthRequest="325" VerticalOptions="Center" HorizontalOptions="Center">
-            <Label HorizontalTextAlignment="Center" FontSize="40" TextColor="White" FontAttributes="Bold" Text="Se connecter sur Madera"/>
-            <Components:MDEntry Margin="0,10,0,20" Placeholder="Adresse email" PlaceholderColor="White" Opacity="0.5" />
-            <Button Text="Continuer" BackgroundColor="#00A18D" TextColor="White" CornerRadius="10" FontSize="20" FontAttributes="Bold" HeightRequest="66" />
+        <StackLayout
+            WidthRequest="325"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+        >
+            <Image Source="MaderaLogo.png" />
+            <Label
+                HorizontalTextAlignment="Center"
+                FontSize="40" TextColor="White"
+                FontAttributes="Bold"
+                Text="Se connecter sur Madera"
+            />
+            <Components:MDEntry
+                Margin="0,10,0,20"
+                Placeholder="Adresse email"
+                PlaceholderColor="White"
+                TextColor="White"
+                Opacity="0.5"
+                x:Name="EmailEntry"
+                Unfocused="RemoveOpacity"
+                Focused="AddOpacity"
+             />
+            <Components:MDEntry
+                Margin="0,10,0,20"
+                Placeholder="Mot de passe"
+                PlaceholderColor="White"
+                TextColor="White"
+                Opacity="0"
+                IsVisible="False"
+                x:Name="PassEntry"
+                Completed="ShowNext"
+                Unfocused="RemoveOpacity"
+                Focused="AddOpacity"
+             />
+            <Button
+                Text="Continuer"
+                BackgroundColor="#00A18D"
+                TextColor="White"
+                CornerRadius="10"
+                FontSize="20"
+                FontAttributes="Bold"
+                HeightRequest="66"
+                Clicked="ShowNext"
+             />
         </StackLayout>
     </ContentPage.Content>
     
