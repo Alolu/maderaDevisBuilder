@@ -5,7 +5,7 @@
     x:Class="MaderaDevisBuilder.ViewModels.MenuPage"
     >
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Spacing="25">
             <StackLayout Orientation="Horizontal" Spacing="20">
                 <Image Source="menu.png" HeightRequest="30" />
                 <BoxView  
@@ -17,6 +17,123 @@
                 />
                 <Label Style="{StaticResource Title}" Text="Bienvenue Etienne" />
             </StackLayout>
+            <FlexLayout VerticalOptions="FillAndExpand" Direction="Row" JustifyContent="SpaceAround" Padding="20,0" Wrap="Wrap">
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <AbsoluteLayout VerticalOptions="FillAndExpand">
+                        <Frame
+                            IsClippedToBounds="True"
+                            VerticalOptions="FillAndExpand"
+                            Padding="3,20"
+                            BorderColor="White"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            AbsoluteLayout.LayoutFlags="All"
+                            AbsoluteLayout.LayoutBounds="1,1,1,1"
+                        >
+                            <ListView HeightRequest="0">
+                                <ListView.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Baboon</x:String>
+                                        <x:String>Capuchin Monkey</x:String>
+                                        <x:String>Blue Monkey</x:String>
+                                        <x:String>Squirrel Monkey</x:String>
+                                        <x:String>Golden Lion Tamarin</x:String>
+                                        <x:String>Howler Monkey</x:String>
+                                        <x:String>Japanese Macaque</x:String>
+                                        <x:String>Baboon</x:String>
+                                        <x:String>Capuchin Monkey</x:String>
+                                        <x:String>Blue Monkey</x:String>
+                                        <x:String>Squirrel Monkey</x:String>
+                                        <x:String>Golden Lion Tamarin</x:String>
+                                        <x:String>Howler Monkey</x:String>
+                                        <x:String>Japanese Macaque</x:String>
+                                        <x:String>Baboon</x:String>
+                                        <x:String>Capuchin Monkey</x:String>
+                                        <x:String>Blue Monkey</x:String>
+                                        <x:String>Squirrel Monkey</x:String>
+                                        <x:String>Golden Lion Tamarin</x:String>
+                                        <x:String>Howler Monkey</x:String>
+                                        <x:String>Japanese Macaque</x:String>
+                                    </x:Array>
+                                </ListView.ItemsSource>
+                            </ListView>
+                        </Frame>
+                        <AbsoluteLayout>
+                            <Label
+                                BackgroundColor="{StaticResource PrimaryColor}"
+                                Style="{StaticResource Title}"
+                                AbsoluteLayout.LayoutFlags="None"
+                                AbsoluteLayout.LayoutBounds="35,-25,90,35"
+                                Text="Client"
+                                HorizontalTextAlignment="Center"
+                            />
+                        </AbsoluteLayout>
+                     </AbsoluteLayout>
+                    
+                </StackLayout>
+                <!--<Frame Padding="3,20" BorderColor="White" BackgroundColor="{StaticResource PrimaryColor}" >
+                    <StackLayout>
+                        <AbsoluteLayout WidthRequest="0">
+                            <Label
+                                BackgroundColor="{StaticResource PrimaryColor}"
+                                Style="{StaticResource Title}"
+                                AbsoluteLayout.LayoutFlags="All"
+                                AbsoluteLayout.LayoutBounds="0.2,-0.34,0.35,0.2"
+                                Text="Client"
+                                HorizontalTextAlignment="Center"
+                            />
+                        </AbsoluteLayout>
+                        <ScrollView  VerticalOptions="FillAndExpand" BackgroundColor="AntiqueWhite">
+                            <Label Text="Test"/>
+                        </ScrollView>
+                    </StackLayout>
+                </Frame>
+                -->
+                <StackLayout VerticalOptions="FillAndExpand" Spacing="25">
+                    <Frame VerticalOptions="FillAndExpand" BorderColor="White" BackgroundColor="{StaticResource PrimaryColor}" >
+                        <!-- X,Y, Width, Height -->
+                        <StackLayout>
+                            <AbsoluteLayout>
+                                <Label
+                                    BackgroundColor="{StaticResource PrimaryColor}"
+                                    Style="{StaticResource Title}"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    AbsoluteLayout.LayoutBounds="0.2,-0.35,0.425,0.23"
+                                    Text="Projets"
+                                    HorizontalTextAlignment="Center"
+                                />
+                            </AbsoluteLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame VerticalOptions="FillAndExpand" BorderColor="White" BackgroundColor="{StaticResource PrimaryColor}" >
+                        <StackLayout>
+                            <AbsoluteLayout>
+                                <Label
+                                    BackgroundColor="{StaticResource PrimaryColor}"
+                                    Style="{StaticResource Title}"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    AbsoluteLayout.LayoutBounds="0.2,-0.35,0.335,0.23"
+                                    Text="Devis"
+                                    HorizontalTextAlignment="Center"
+                                />
+                            </AbsoluteLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <Frame BorderColor="White" BackgroundColor="{StaticResource PrimaryColor}" >
+                    <StackLayout>
+                        <AbsoluteLayout>
+                            <Label
+                                BackgroundColor="{StaticResource PrimaryColor}"
+                                Style="{StaticResource Title}"
+                                AbsoluteLayout.LayoutFlags="All"
+                                AbsoluteLayout.LayoutBounds="0.2,-0.34,0.5,0.2"
+                                Text="Modèles"
+                                HorizontalTextAlignment="Center"
+                            />
+                        </AbsoluteLayout>
+                    </StackLayout>
+                </Frame>
+            </FlexLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
