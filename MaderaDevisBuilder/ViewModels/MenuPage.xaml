@@ -5,6 +5,14 @@
     x:Class="MaderaDevisBuilder.ViewModels.MenuPage"
     >
     <ContentPage.Content>
-        <Label Text="TEST" />
+        <StackLayout>
+            <BoxView  
+                VerticalOptions="Fill"
+                HorizontalOptions="Start"
+                HeightRequest="3"
+                Color="{StaticResource SecondaryColor}"
+            />
+            <Label Style="{StaticResource Title}" Text="Bienvenue Etienne" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

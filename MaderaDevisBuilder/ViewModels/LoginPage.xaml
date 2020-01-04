@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MaderaDevisBuilder.ViewModels.LoginPage"
              xmlns:Components="clr-namespace:MaderaDevisBuilder.Components"
-             BackgroundColor="#4ECE98">
+             >
     <ContentPage.Content>
         <StackLayout
             WidthRequest="325"
@@ -13,8 +13,7 @@
             <Image Source="MaderaLogo.png" />
             <Label
                 HorizontalTextAlignment="Center"
-                FontSize="40" TextColor="White"
-                FontAttributes="Bold"
+                Style="{StaticResource BigTitle}"
                 Text="Se connecter sur Madera"
             />
             <Components:MDEntry
@@ -24,11 +23,13 @@
                 TextColor="White"
                 Opacity="0.5"
                 x:Name="EmailEntry"
+                Completed="ShowNext"
                 Unfocused="RemoveOpacity"
                 Focused="AddOpacity"
              />
             <Components:MDEntry
                 Margin="0,10,0,20"
+                IsPassword="True"
                 Placeholder="Mot de passe"
                 PlaceholderColor="White"
                 TextColor="White"

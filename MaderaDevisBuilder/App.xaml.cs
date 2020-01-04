@@ -7,7 +7,6 @@ namespace MaderaDevisBuilder
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new ViewModels.LoginPage());
         }
 

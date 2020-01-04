@@ -9,8 +9,9 @@ namespace MaderaDevisBuilder.ViewModels
     {
         public MenuPage()
         {
-            InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             NavigationPage.SetHasBackButton(this, false);
+            InitializeComponent();
         }
         protected override bool OnBackButtonPressed()
         {
