@@ -6,13 +6,17 @@
     >
     <ContentPage.Content>
         <StackLayout>
-            <BoxView  
-                VerticalOptions="Fill"
-                HorizontalOptions="Start"
-                HeightRequest="3"
-                Color="{StaticResource SecondaryColor}"
-            />
-            <Label Style="{StaticResource Title}" Text="Bienvenue Etienne" />
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Image Source="menu.png" HeightRequest="30" />
+                <BoxView  
+                    VerticalOptions="Center"
+                    WidthRequest="70"
+                    HorizontalOptions="Start"
+                    HeightRequest="3"
+                    Color="{StaticResource SecondaryColor}"
+                />
+                <Label Style="{StaticResource Title}" Text="Bienvenue Etienne" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
