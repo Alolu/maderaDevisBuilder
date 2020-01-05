@@ -17,5 +17,10 @@ namespace MaderaDevisBuilder.ViewModels
         {
             return true;
         }
+
+        public void ToggleSidebar(object sender, EventArgs e)
+        {
+            App.MenuIsPresented = !App.MenuIsPresented;
+        }
     }
 }

@@ -7,7 +7,12 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" Spacing="20">
-                <Image Source="menu.png" HeightRequest="30" />
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Source="menu.png"
+                    HeightRequest="30"
+                    Clicked="ToggleSidebar"
+                />
                 <BoxView  
                     VerticalOptions="Center"
                     WidthRequest="70"

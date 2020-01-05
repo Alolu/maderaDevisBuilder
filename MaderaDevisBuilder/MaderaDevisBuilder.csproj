@@ -16,9 +16,27 @@
     <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="Components\" />
+    <Folder Include="Navigation\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Services\AppShell.xaml.cs" />
     <Compile Remove="CustomEntry.cs" />
+    <Compile Remove="ViewModels\RootPage.xaml.cs" />
+    <Compile Remove="ViewModels\RootPageDetail.xaml.cs" />
+    <Compile Remove="ViewModels\RootPageMaster.xaml.cs" />
+    <Compile Remove="ViewModels\RootPageMenuItem.cs" />
+    <Compile Remove="Navigation\MyPage.xaml.cs" />
+    <Compile Remove="Navigation\MasterpageDetail.xaml.cs" />
+    <Compile Remove="Navigation\MasterpageMaster.xaml.cs" />
+    <Compile Remove="Navigation\MasterpageMenuItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="ViewModels\RootPageDetail.xaml" />
+    <EmbeddedResource Remove="ViewModels\RootPageMaster.xaml" />
+    <EmbeddedResource Remove="Navigation\MyPage.xaml" />
+    <EmbeddedResource Remove="Navigation\MyPage.xaml" />
+    <EmbeddedResource Remove="Navigation\MyPage.xaml" />
+    <EmbeddedResource Remove="Navigation\MasterpageDetail.xaml" />
+    <EmbeddedResource Remove="Navigation\MasterpageMaster.xaml" />
   </ItemGroup>
 </Project>
