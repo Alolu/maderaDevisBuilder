@@ -30,7 +30,13 @@
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="1,1,1,1"
                     >
-                       <ListView RowHeight="50" ItemTemplate="{StaticResource alternateColorDataTemplateSelector}" HeightRequest="0" ItemsSource="{Binding Items}" />
+                       <ListView
+                           SeparatorVisibility="None"
+                           RowHeight="50"
+                           ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
+                           HeightRequest="0"
+                           ItemsSource="{Binding Items}"
+                       />
                     </Frame>
                     <AbsoluteLayout>
                         <Label
@@ -55,7 +61,13 @@
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="1,1,1,1"
                     >
-                        <ListView RowHeight="50" ItemTemplate="{StaticResource alternateColorDataTemplateSelector}" HeightRequest="0" ItemsSource="{Binding Items}" />
+                        <ListView
+                           SeparatorVisibility="None"
+                           RowHeight="50"
+                           ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
+                           HeightRequest="0"
+                           ItemsSource="{Binding Items}"
+                       />
                     </Frame>
                     <AbsoluteLayout>
                         <Label
@@ -78,7 +90,13 @@
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="1,1,1,1"
                     >
-                        <ListView RowHeight="50" ItemTemplate="{StaticResource alternateColorDataTemplateSelector}" HeightRequest="0" ItemsSource="{Binding Items}" />
+                        <ListView
+                           SeparatorVisibility="None"
+                           RowHeight="50"
+                           ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
+                           HeightRequest="0"
+                           ItemsSource="{Binding Items}"
+                        />
                     </Frame>
                     <AbsoluteLayout>
                         <Label
@@ -102,7 +120,13 @@
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="1,1,1,1"
                     >
-                        <ListView RowHeight="50" ItemTemplate="{StaticResource alternateColorDataTemplateSelector}" HeightRequest="0" ItemsSource="{Binding Items}" />
+                        <ListView
+                           SeparatorVisibility="None"
+                           RowHeight="50"
+                           ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
+                           HeightRequest="0"
+                           ItemsSource="{Binding Items}"
+                        />
                     </Frame>
                     <AbsoluteLayout>
                         <Label
