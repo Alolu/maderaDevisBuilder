@@ -24,19 +24,40 @@
                     <Frame
                         IsClippedToBounds="True"
                         VerticalOptions="FillAndExpand"
-                        Padding="3,20"
+                        Padding="3,22,3,0"
                         BorderColor="White"
                         BackgroundColor="{StaticResource PrimaryColor}"
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="1,1,1,1"
                     >
-                       <ListView
-                           SeparatorVisibility="None"
-                           RowHeight="50"
-                           ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
-                           HeightRequest="0"
-                           ItemsSource="{Binding Items}"
-                       />
+                       <StackLayout Spacing="0">
+                           <ListView
+                               SeparatorVisibility="None"
+                               RowHeight="50"
+                               ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
+                               HeightRequest="0"
+                               ItemsSource="{Binding Items}"
+                           />
+                           <Grid Padding="30,0">
+                               <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="60*" />
+                                   <ColumnDefinition Width="40*" />
+                               </Grid.ColumnDefinitions>
+                               <Grid.RowDefinitions>
+                                   <RowDefinition Height="70" />
+                               </Grid.RowDefinitions>
+                               <Components:MDEntry VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Placeholder="Rechercher" />
+                               <ImageButton
+                                   Grid.Row="0"
+                                   Source="plus.png"
+                                   Scale="0.5"
+                                   HeightRequest="35"
+                                   BackgroundColor="Transparent"
+                                   Grid.Column="1"
+                               />
+                           </Grid>
+                       </StackLayout>
+                       
                     </Frame>
                     <AbsoluteLayout>
                         <Label
@@ -55,19 +76,39 @@
                     <Frame
                         IsClippedToBounds="True"
                         VerticalOptions="FillAndExpand"
-                        Padding="3,20"
+                        Padding="3,22,3,0"
                         BorderColor="White"
                         BackgroundColor="{StaticResource PrimaryColor}"
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="1,1,1,1"
                     >
-                        <ListView
-                           SeparatorVisibility="None"
-                           RowHeight="50"
-                           ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
-                           HeightRequest="0"
-                           ItemsSource="{Binding Items}"
-                       />
+                        <StackLayout Spacing="0">
+                           <ListView
+                               SeparatorVisibility="None"
+                               RowHeight="50"
+                               ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
+                               HeightRequest="0"
+                               ItemsSource="{Binding Items}"
+                           />
+                           <Grid Padding="30,0">
+                               <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="60*" />
+                                   <ColumnDefinition Width="40*" />
+                               </Grid.ColumnDefinitions>
+                               <Grid.RowDefinitions>
+                                   <RowDefinition Height="70" />
+                               </Grid.RowDefinitions>
+                               <Components:MDEntry VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Placeholder="Rechercher" />
+                               <ImageButton
+                                   Grid.Row="0"
+                                   Source="plus.png"
+                                   Scale="0.5"
+                                   HeightRequest="35"
+                                   BackgroundColor="Transparent"
+                                   Grid.Column="1"
+                               />
+                           </Grid>
+                       </StackLayout>
                     </Frame>
                     <AbsoluteLayout>
                         <Label
@@ -84,19 +125,39 @@
                     <Frame
                         IsClippedToBounds="True"
                         VerticalOptions="FillAndExpand"
-                        Padding="3,20"
+                        Padding="3,22,3,0"
                         BorderColor="White"
                         BackgroundColor="{StaticResource PrimaryColor}"
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="1,1,1,1"
                     >
-                        <ListView
-                           SeparatorVisibility="None"
-                           RowHeight="50"
-                           ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
-                           HeightRequest="0"
-                           ItemsSource="{Binding Items}"
-                        />
+                        <StackLayout Spacing="0">
+                           <ListView
+                               SeparatorVisibility="None"
+                               RowHeight="50"
+                               ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
+                               HeightRequest="0"
+                               ItemsSource="{Binding Items}"
+                           />
+                           <Grid Padding="30,0">
+                               <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="60*" />
+                                   <ColumnDefinition Width="40*" />
+                               </Grid.ColumnDefinitions>
+                               <Grid.RowDefinitions>
+                                   <RowDefinition Height="70" />
+                               </Grid.RowDefinitions>
+                               <Components:MDEntry VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Placeholder="Rechercher" />
+                               <ImageButton
+                                   Grid.Row="0"
+                                   Source="plus.png"
+                                   Scale="0.5"
+                                   HeightRequest="35"
+                                   BackgroundColor="Transparent"
+                                   Grid.Column="1"
+                               />
+                           </Grid>
+                       </StackLayout>
                     </Frame>
                     <AbsoluteLayout>
                         <Label
@@ -114,19 +175,39 @@
                     <Frame
                         IsClippedToBounds="True"
                         VerticalOptions="FillAndExpand"
-                        Padding="3,20"
+                        Padding="3,22,3,0"
                         BorderColor="White"
                         BackgroundColor="{StaticResource PrimaryColor}"
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="1,1,1,1"
                     >
-                        <ListView
-                           SeparatorVisibility="None"
-                           RowHeight="50"
-                           ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
-                           HeightRequest="0"
-                           ItemsSource="{Binding Items}"
-                        />
+                        <StackLayout Spacing="0">
+                           <ListView
+                               SeparatorVisibility="None"
+                               RowHeight="50"
+                               ItemTemplate="{StaticResource alternateColorDataTemplateSelector}"
+                               HeightRequest="0"
+                               ItemsSource="{Binding Items}"
+                           />
+                           <Grid Padding="30,0">
+                               <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="60*" />
+                                   <ColumnDefinition Width="40*" />
+                               </Grid.ColumnDefinitions>
+                               <Grid.RowDefinitions>
+                                   <RowDefinition Height="70" />
+                               </Grid.RowDefinitions>
+                               <Components:MDEntry VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Placeholder="Rechercher" />
+                               <ImageButton
+                                   Grid.Row="0"
+                                   Source="plus.png"
+                                   Scale="0.5"
+                                   HeightRequest="35"
+                                   BackgroundColor="Transparent"
+                                   Grid.Column="1"
+                               />
+                           </Grid>
+                       </StackLayout>
                     </Frame>
                     <AbsoluteLayout>
                         <Label
