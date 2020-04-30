@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MaderaDevisBuilder.ViewModels.DevisPage" xmlns:Components="clr-namespace:MaderaDevisBuilder.Components">
+    <ContentPage.Title>Créer un nouveau projet</ContentPage.Title>
+    <ContentPage.Content>
+       <StackLayout Spacing="25">
+           <StackLayout>
+               <Picker Title="Choisir un client" ItemsSource="{Binding Clients}" ItemDisplayBinding="{Binding Nom}" />
+                <Entry Placeholder="Nom du projet"/>
+           </StackLayout>
+           <StackLayout>
+                <Label Text="Ajouter un produit" />
+                <Picker Title="Choisir une gamme" />
+                <Picker Title="Choisir un module" />
+           </StackLayout>
+           <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
+               <StackLayout Orientation="Horizontal">
+                   <Frame
+                       Padding="3,22,3,0"
+                       BorderColor="White"
+                       BackgroundColor="{StaticResource PrimaryColor}"
+                   >
+                       <Label Text="Test" FontSize="Medium" />
+                    </Frame>
+                   <Frame
+                       Padding="3,22,3,0"
+                       BorderColor="White"
+                       BackgroundColor="{StaticResource PrimaryColor}"
+                   >
+                       <StackLayout>
+                           <Label Text="Gamme: Vert"/>
+                           <Label Text="Module: Mur droit"/>
+                       </StackLayout>
+                    </Frame>
+                   <Frame
+                       Padding="3,22,3,0"
+                       BorderColor="White"
+                       BackgroundColor="{StaticResource PrimaryColor}"
+                   >
+                       <Label Text="Test"/>
+                    </Frame>
+                   <Frame
+                       Padding="3,22,3,0"
+                       BorderColor="White"
+                       BackgroundColor="{StaticResource PrimaryColor}"
+                   >
+                       <Label Text="Test"/>
+                    </Frame>
+               </StackLayout>
+           </ScrollView>
+       </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

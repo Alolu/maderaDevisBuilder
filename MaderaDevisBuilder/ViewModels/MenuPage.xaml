@@ -111,6 +111,7 @@
                                    HeightRequest="35"
                                    BackgroundColor="Transparent"
                                    Grid.Column="1"
+                                   Clicked="OnAddClicked"
                                />
                            </Grid>
                        </StackLayout>
@@ -219,8 +220,8 @@
                             BackgroundColor="{StaticResource PrimaryColor}"
                             Style="{StaticResource Title}"
                             AbsoluteLayout.LayoutFlags="None"
-                            AbsoluteLayout.LayoutBounds="35,-25,110,45"
-                            Text="Modèles"
+                            AbsoluteLayout.LayoutBounds="34,-25,130,45"
+                            Text="Modules"
                             HorizontalTextAlignment="Center"
                         />
                     </AbsoluteLayout>

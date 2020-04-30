@@ -41,12 +41,12 @@
             </Style>
             <DataTemplate x:Key="evenTemplate">
                 <ViewCell xfg:CellGloss.BackgroundColor="{StaticResource PrimaryColor}">
-                    <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{Binding .}" />
+                    <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{Binding Nom}" />
                 </ViewCell>
             </DataTemplate>
             <DataTemplate x:Key="unevenTemplate">
                 <ViewCell xfg:CellGloss.BackgroundColor="{StaticResource SecondaryColor}">
-                    <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{Binding .}" />
+                    <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{Binding Nom}" />
                 </ViewCell>
             </DataTemplate>
             <Components:MDDataTemplate x:Key="alternateColorDataTemplateSelector"
