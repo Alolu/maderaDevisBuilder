@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MaderaDevisBuilder.Models;
 using Xamarin.Forms;
 
 namespace MaderaDevisBuilder.Components
@@ -10,7 +11,7 @@ namespace MaderaDevisBuilder.Components
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
-            return ((List<string>)((ListView)container).ItemsSource).IndexOf(item as string) % 2 == 0 ? EvenTemplate : UnevenTemplate;
+            return ((List<Client>)((ListView)container).ItemsSource).IndexOf(item as Client) % 2 == 0 ? EvenTemplate : UnevenTemplate;
         }
     }
 }
