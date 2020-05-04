@@ -15,8 +15,14 @@ namespace MaderaDevisBuilder.Models
             this.Module = module;
         }
 
+        public Produit(string gamme, Module module)
+        {
+            this.Gamme = gamme;
+            this.Module = module;
+        }
+
         public int Id { get => id; set => id = value; }
         public string Gamme { get => gamme; set => gamme = value; }
-        internal Module Module { get => module; set => module = value; }
+        public Module Module { get => module; set => module = value; }
     }
 }
