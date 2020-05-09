@@ -2,18 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MaderaDevisBuilder.ViewModels.DevisPage" xmlns:Components="clr-namespace:MaderaDevisBuilder.Components">
     <ContentPage.Title>Créer un nouveau projet</ContentPage.Title>
     <ContentPage.Content>
-       <StackLayout Spacing="25">
+       <StackLayout Spacing="0">
            <StackLayout>
                <Picker x:Name="ClientList" Title="Choisir un client" ItemsSource="{Binding Clients}" ItemDisplayBinding="{Binding Nom}" SelectedIndexChanged="enableProjectName"/>
-                <Entry  IsEnabled="False" x:Name="ProjectName" Placeholder="Nom du projet" Completed="enableGamme" />
+                <Entry  IsEnabled="False" x:Name="ProjectName" Placeholder="Nom du projet" Unfocused="enableGamme" Completed="enableGamme" />
            </StackLayout>
            <StackLayout>
                 <Label Text="Ajouter un produit" />
                 <Picker x:Name="GammeList" IsEnabled="False" ItemsSource="{Binding Gammes}" SelectedIndexChanged="enableModule" Title="Choisir une gamme" />
                 <Picker x:Name="ModuleList" IsEnabled="False" ItemsSource="{Binding Modules}" SelectedIndexChanged="enableButton" ItemDisplayBinding="{Binding Nom}" Title="Choisir un module" />
-                <Button x:Name="AddButton" Text="Ajouter ce produit" IsEnabled="False" Clicked="addProduit" />
+               <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                   <Button x:Name="AddButton" Text="Ajouter ce produit" IsEnabled="False" Clicked="addProduit" />
+                   <Button x:Name="CreaMod" IsEnabled="False" Text="Creer un module" Clicked="goCreateMod" />
+               </StackLayout>
+               
            </StackLayout>
-                   <CollectionView ItemsSource="{Binding Produits}" ItemsLayout="HorizontalList">
+               <CollectionView ItemsSource="{Binding Produits}" ItemsLayout="HorizontalList">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame
@@ -32,7 +36,8 @@
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
-                    </CollectionView>
+                </CollectionView>
+           <Button Text="Valider"/>
        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

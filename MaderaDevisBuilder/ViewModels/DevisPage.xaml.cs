@@ -9,6 +9,7 @@ namespace MaderaDevisBuilder.ViewModels
 {
     public partial class DevisPage : ContentPage
     {
+        public Projet MonProjet { get; set; }
         public List<Client> Clients { get; set; } = ClientDao.Clients;
         public List<Module> Modules { get; set; } = ModuleDao.Modules;
         public ObservableCollection<Produit> Produits { get; set; } = new ObservableCollection<Produit>();
@@ -27,6 +28,8 @@ namespace MaderaDevisBuilder.ViewModels
         public void enableProjectName(object sender,EventArgs e)
         {
             ProjectName.IsEnabled = true;
+            MonProjet = new Projet(ProjectName.Text); //A cause de l'event unfocused ou completed, entry n'a pas reelement de valeur au moment de l'evenement i.e -> recuperer la valeur d'une autre maniere pour fix le bug de projet qui n'est pas reelement instancié
+            CreaMod.IsEnabled = true;
         }
 
         public void enableGamme(object sender, EventArgs e)
@@ -53,6 +56,16 @@ namespace MaderaDevisBuilder.ViewModels
 
             ModuleList.IsEnabled = false;
             AddButton.IsEnabled = false;
+        }
+
+        public void setModuleList(Module m)
+        {
+            ModuleList.SelectedItem = m;
+        }
+
+        public void goCreateMod(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CreateModule(this));
         }
 
         public void deleteProduit(object sender, EventArgs e)

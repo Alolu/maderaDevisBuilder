@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MaderaDevisBuilder.ViewModels.CreateModule">
+    <ContentPage.Title>Creation de module</ContentPage.Title>
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="TitreMod" Placeholder="Nom du module"/>
+            <Entry x:Name="SectionEntry" Placeholder="Section" />
+            <Entry x:Name="LongueurEntry" Placeholder="Longueur" />
+            <Picker x:Name="AnglePicker" Title="Choisir un angle (Optionel)">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Sortant</x:String>
+                        <x:String>Entrant</x:String>
+                    </x:Array>
+                    </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Ajouter la mesure" Clicked="addMesure"/>
+            <CollectionView ItemsSource="{Binding Mesures}" ItemsLayout="HorizontalList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                
+                               BorderColor="White"
+                               BackgroundColor="{StaticResource PrimaryColor}"
+                               
+                            >
+                               <Frame.GestureRecognizers>
+                                   <TapGestureRecognizer NumberOfTapsRequired="2"/>
+                               </Frame.GestureRecognizers>
+                               <StackLayout>
+                                   <Label FontSize="Subtitle" Text="{Binding Section, StringFormat='Section : {0:F0} cm'}"/>
+                                   <Label FontSize="Subtitle" Text="{Binding Longueur, StringFormat='Longueur : {0:F0} cm'}"/>
+                                   <Label FontSize="Subtitle" Text="{Binding Angle}" />
+                               </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <Button x:Name="Confirmer" IsEnabled="False" Text="Confirmer le module" Clicked="addModule"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -11,6 +11,12 @@ namespace MaderaDevisBuilder.Models
         Client client;
         DateTime date;
         List<Produit> produits;
+        List<Module> created;
+
+        public Projet(string nom)
+        {
+            Nom = nom;
+        }
 
         public Projet(string nom, string reference, Client client, DateTime date, List<Produit> produits)
         {
@@ -26,5 +32,6 @@ namespace MaderaDevisBuilder.Models
         public Client Client { get => client; set => client = value; }
         public DateTime Date { get => date; set => date = value; }
         public List<Produit> Produits { get => produits; set => produits = value; }
+        public List<Module> Created { get => created; set => created = value; }
     }
 }
