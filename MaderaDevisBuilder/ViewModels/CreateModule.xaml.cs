@@ -11,7 +11,7 @@ namespace MaderaDevisBuilder.ViewModels
     {
 
         DevisPage page;
-        public ObservableCollection<Mesure> Mesures { get; set;  } = new ObservableCollection<Mesure>();
+        public ObservableCollection<Mesure> Mesures { get; set; } = new ObservableCollection<Mesure>();
 
         public CreateModule(DevisPage page)
         {
@@ -37,8 +37,8 @@ namespace MaderaDevisBuilder.ViewModels
         public void addModule(object sender, EventArgs e)
         {
             Module m = new Module(TitreMod.Text, Mesures.ToArray());
-            page.MonProjet.Created.Add(m);
             page.Modules.Add(m);
+            page.MonProjet.Created.Add(m);
             page.setModuleList(m);
             Navigation.RemovePage(this);
         }

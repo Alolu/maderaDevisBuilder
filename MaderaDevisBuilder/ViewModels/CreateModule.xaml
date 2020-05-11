@@ -28,8 +28,8 @@
                                    <TapGestureRecognizer NumberOfTapsRequired="2"/>
                                </Frame.GestureRecognizers>
                                <StackLayout>
-                                   <Label FontSize="Subtitle" Text="{Binding Section, StringFormat='Section : {0:F0} cm'}"/>
-                                   <Label FontSize="Subtitle" Text="{Binding Longueur, StringFormat='Longueur : {0:F0} cm'}"/>
+                                   <Label FontSize="Subtitle" Text="{Binding Section, StringFormat='Section : {0:F2} cm'}"/>
+                                   <Label FontSize="Subtitle" Text="{Binding Longueur, StringFormat='Longueur : {0:F2} cm'}"/>
                                    <Label FontSize="Subtitle" Text="{Binding Angle}" />
                                </StackLayout>
                             </Frame>

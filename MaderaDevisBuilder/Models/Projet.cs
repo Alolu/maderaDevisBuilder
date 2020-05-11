@@ -9,21 +9,22 @@ namespace MaderaDevisBuilder.Models
         string nom;
         string reference;
         Client client;
-        DateTime date;
+        DateTime date = new DateTime();
         List<Produit> produits;
-        List<Module> created;
+        List<Module> created = new List<Module>();
 
-        public Projet(string nom)
+        public Projet(string nom,Client client)
         {
             Nom = nom;
+            Client = client;
+            Reference = client.Nom + "-" + nom + "-1";
         }
 
-        public Projet(string nom, string reference, Client client, DateTime date, List<Produit> produits)
+        public Projet(string nom, string reference, Client client, List<Produit> produits)
         {
             Nom = nom;
             Reference = reference;
             Client = client;
-            Date = date;
             Produits = produits;
         }
 

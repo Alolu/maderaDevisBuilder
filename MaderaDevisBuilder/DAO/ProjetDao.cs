@@ -11,7 +11,7 @@ namespace MaderaDevisBuilder.DAO
 
         public List<Projet> Projets { get; set; } = new List<Projet>
             {
-                new Projet("Borniche-01","BL1-01",Clients[0],new DateTime(),Produits)
+                new Projet("Borniche-01","BL1-01",Clients[0],Produits)
             };
     }
 }

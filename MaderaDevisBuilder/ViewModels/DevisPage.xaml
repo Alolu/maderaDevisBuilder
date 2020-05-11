@@ -9,7 +9,7 @@
            </StackLayout>
            <StackLayout>
                 <Label Text="Ajouter un produit" />
-                <Picker x:Name="GammeList" IsEnabled="False" ItemsSource="{Binding Gammes}" SelectedIndexChanged="enableModule" Title="Choisir une gamme" />
+                <Picker x:Name="GammeList" IsEnabled="False" ItemsSource="{Binding Gammes}" ItemDisplayBinding="{Binding Nom}" SelectedIndexChanged="enableModule" Title="Choisir une gamme" />
                 <Picker x:Name="ModuleList" IsEnabled="False" ItemsSource="{Binding Modules}" SelectedIndexChanged="enableButton" ItemDisplayBinding="{Binding Nom}" Title="Choisir un module" />
                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                    <Button x:Name="AddButton" Text="Ajouter ce produit" IsEnabled="False" Clicked="addProduit" />
@@ -21,23 +21,21 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame
-                                
                                BorderColor="White"
                                BackgroundColor="{StaticResource PrimaryColor}"
-                               
                             >
                                <Frame.GestureRecognizers>
                                    <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="deleteProduit" />
                                </Frame.GestureRecognizers>
                                <StackLayout>
-                                   <Label Text="{Binding Gamme}"/>
-                                   <Label Text="{Binding Module.Nom}"/>
+                                   <Label Text="{Binding Gamme.Nom, StringFormat='Gamme : {0:F0}'}"/>
+                                   <Label Text="{Binding Module.Nom, StringFormat='Module : {0:F0}'}"/>
                                </StackLayout>
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-           <Button Text="Valider"/>
+           <Button  Clicked="createProjet" Text="Valider"/>
        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using MaderaDevisBuilder.DAO;
 using MaderaDevisBuilder.Models;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace MaderaDevisBuilder.ViewModels
 {
@@ -11,13 +12,9 @@ namespace MaderaDevisBuilder.ViewModels
     {
         public Projet MonProjet { get; set; }
         public List<Client> Clients { get; set; } = ClientDao.Clients;
-        public List<Module> Modules { get; set; } = ModuleDao.Modules;
+        public ObservableCollection<Module> Modules { get; set; } = new ObservableCollection<Module>(ModuleDao.Modules);
         public ObservableCollection<Produit> Produits { get; set; } = new ObservableCollection<Produit>();
-        public List<string> Gammes { get; set; } = new List<string>
-        {
-            "Vert",
-            "Luxe"
-        };
+        public List<Gamme> Gammes { get; set; } = GammeDao.Gammes;
 
         public DevisPage()
         {
@@ -28,13 +25,13 @@ namespace MaderaDevisBuilder.ViewModels
         public void enableProjectName(object sender,EventArgs e)
         {
             ProjectName.IsEnabled = true;
-            MonProjet = new Projet(ProjectName.Text); //A cause de l'event unfocused ou completed, entry n'a pas reelement de valeur au moment de l'evenement i.e -> recuperer la valeur d'une autre maniere pour fix le bug de projet qui n'est pas reelement instancié
-            CreaMod.IsEnabled = true;
         }
 
         public void enableGamme(object sender, EventArgs e)
         {
+            MonProjet = new Projet(ProjectName.Text, (Client)ClientList.SelectedItem);
             GammeList.IsEnabled = true;
+            CreaMod.IsEnabled = true;
         }
 
         public void enableModule(object sender, EventArgs e)
@@ -49,8 +46,21 @@ namespace MaderaDevisBuilder.ViewModels
 
         public void addProduit(object sender, EventArgs e)
         {
-            Produits.Add(new Produit((string)GammeList.SelectedItem, (Module)ModuleList.SelectedItem));
-            
+            Produit p = new Produit((Gamme)GammeList.SelectedItem, (Module)ModuleList.SelectedItem);
+            bool conf = false;
+            foreach(Produit pl in Produits)
+            {
+                if (p.Nom == pl.Nom && p.Gamme.Nom == pl.Gamme.Nom)
+                {
+                    pl.addQte();
+                    conf = true;
+                    break;
+                }
+            }
+            if (!conf)
+            {
+                Produits.Add(p);
+            }
             GammeList.SelectedItem = null;
             ModuleList.SelectedItem = null;
 
@@ -80,6 +90,12 @@ namespace MaderaDevisBuilder.ViewModels
             AddButton.IsEnabled = true;
 
             Produits.Remove(par);
+        }
+
+        public void createProjet(object sender, EventArgs e)
+        {
+            MonProjet.Produits = Produits.ToList();
+            Navigation.PushAsync(new PortailProjet(MonProjet));
         }
     }
 }
